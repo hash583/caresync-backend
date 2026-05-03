@@ -50,7 +50,7 @@ const app = express();
 
 // ✅ CORS
 app.use(cors({
-  origin: "https://agent-69f7152b8e281928c3d6cc7a--caresyncsmart.netlify.app/",
+  origin: "https://agent-69f71f7e096cd056e9b6d1a0--caresyncsmart.netlify.app/",
   credentials: true,
 }));
 
