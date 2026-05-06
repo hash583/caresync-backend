@@ -5,19 +5,22 @@ let io;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "*",
+      origin: "https://caresynccare.netlify.app", // ✅ exact origin
+      methods: ["GET", "POST"],
+      credentials: true
     },
+    transports: ["websocket", "polling"] // ✅ important for Railway
   });
 
   io.on("connection", (socket) => {
-    console.log("User connected:", socket.id);
+    console.log("✅ User connected:", socket.id);
 
     socket.on("joinFamily", (familyId) => {
       socket.join(familyId);
     });
 
     socket.on("disconnect", () => {
-      console.log("User disconnected");
+      console.log("❌ User disconnected");
     });
   });
 };
