@@ -5,7 +5,7 @@ let io;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "https://frontend-caresync.vercel.app", // ✅ exact origin
+      origin: "https://caresync-care.vercel.app", // ✅ exact origin
       methods: ["GET", "POST"],
       credentials: true
     },
