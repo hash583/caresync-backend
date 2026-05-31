@@ -51,7 +51,7 @@ const app = express();
 // ✅ CORS
 app.use(cors({
   origin: [
-   "https://frontend-caresync.vercel.app"
+   "https://caresync-care.vercel.app"
   ],
   credentials: true,
 }));
